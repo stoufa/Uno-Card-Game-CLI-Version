@@ -20,11 +20,11 @@ C'est une première itération que je l'ai exploité ensuite pour ajouter la cou
   <img src="https://raw.githubusercontent.com/stoufa/Jeu-Uno-Version-Console/master/uno.jpg" alt="Jeu-Uno-Version-Console-Preview"/>
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/stoufa/Jeu-Uno-Version-Console/master/screenshots/2.PNG" alt="Jeu-Uno-Version-Console-Preview"/>
-</p>
-
 :us: The game supports 2 to 4 players who take turns playing according to the rules of the game.  
 
 :fr: Le jeu supporte 2 à 4 joueurs qui jouent à tour de rôle selon les règlements du jeu.  
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/stoufa/Jeu-Uno-Version-Console/master/screenshots/2.PNG" alt="Jeu-Uno-Version-Console-Preview"/>
+</p>
 
