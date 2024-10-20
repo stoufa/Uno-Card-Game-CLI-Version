@@ -1,5 +1,5 @@
 services:
-  uno-game:
+  uno-game-cli:
     build:
       context: .
       dockerfile: Dockerfile

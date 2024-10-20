@@ -35,5 +35,3 @@ C'est une première itération que je l'ai exploité ensuite pour ajouter la cou
 <pre align="center">
 15m4Prjz4WLSsCgBcZTa62cUetiwo6sZKg
 </pre>
-
-
