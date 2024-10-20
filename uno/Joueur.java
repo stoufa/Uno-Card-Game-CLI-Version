@@ -6,7 +6,7 @@ import java.util.HashMap;
 import io.Clavier;
 
 /**
- * cette classe représente le joueur : ce qu'il a et ce qu'il peut faire, çàd ses propriétés et ses actions
+ * cette classe reprÃ©sente le joueur : ce qu'il a et ce qu'il peut faire, Ã§Ã d ses propriÃ©tÃ©s et ses actions
  * @author Stoufa
  *
  */
@@ -21,11 +21,11 @@ public class Joueur {
 	 */
 	private String pseudo;
 	/**
-	 * la pioche : la pile des cartes où le joueur peut prendre des cartes dans le cas où il n'a pas de cartes jouables
+	 * la pioche : la pile des cartes oÃ¹ le joueur peut prendre des cartes dans le cas oÃ¹ il n'a pas de cartes jouables
 	 */
 	private Pioche pioche;
 	/**
-	 * le talon : la pile des cartes où les joueurs dépose leurs cartes
+	 * le talon : la pile des cartes oÃ¹ les joueurs dÃ©pose leurs cartes
 	 */
 	private Talon talon;
 
@@ -43,8 +43,8 @@ public class Joueur {
 	}
 	
 	/**
-	 * permet de prender une carte de la pioche et l'ajouter à la main du joueur
-	 * @return la carte tirée
+	 * permet de prender une carte de la pioche et l'ajouter Ã  la main du joueur
+	 * @return la carte tirÃ©e
 	 */
 	public Carte prendreCarte() {
 		if (pioche.nbCartes() == 0) {	// la pioche est vide !
@@ -63,7 +63,7 @@ public class Joueur {
 	}
 	
 	/**
-	 * cette méthode permet d'afficher les cartes dans la main du joueur courant
+	 * cette mÃ©thode permet d'afficher les cartes dans la main du joueur courant
 	 */
 	public void afficherMain() {
 		String str = "";
@@ -87,18 +87,18 @@ public class Joueur {
 	/**
 	 * permet au joueur de jouer son tour
 	 */
-	public void jouerTour() {	// TODO : ajouter le cas où on a des doublons ! on doit se débarasser de toutes les occurences de la carte jouée !
+	public void jouerTour() {	// TODO : ajouter le cas oÃ¹ on a des doublons ! on doit se dÃ©barasser de toutes les occurences de la carte jouÃ©e !
 		talon.afficherSommet();
 		afficherMain();
 		if (nbCartesJouables() == 0) {
 			System.out.println("Vous n'avez pas de cartes jouables ! vous devez piocher !");
 			pause();
 			Carte c = prendreCarte();
-			System.out.println("La carte piochée est : " + c);
-			if (!c.compatible(talon.sommet())) {	// la carte récemment piochée n'est pas compatible avec le sommet du talon
+			System.out.println("La carte piochÃ©e est : " + c);
+			if (!c.compatible(talon.sommet())) {	// la carte rÃ©cemment piochÃ©e n'est pas compatible avec le sommet du talon
 				System.out.println("Pas de chance ! vous n'avez encore pas de cartes jouables, vous devez passer le tour");
 				System.out.println("----------------------------------");
-				return;	// passer le tour <=> quitter la méthode
+				return;	// passer le tour <=> quitter la mÃ©thode
 			} else {
 				afficherMain();
 			}
@@ -108,7 +108,7 @@ public class Joueur {
 	}
 	
 	/**
-	 * permet d'attendre un peu pour que l'utilisateur arrive à lire le message affiché
+	 * permet d'attendre un peu pour que l'utilisateur arrive Ã  lire le message affichÃ©
 	 */
 	private void pause() {
 		try {
@@ -133,20 +133,20 @@ public class Joueur {
 			if (carteAjouer.compatible(talon.sommet())) {
 				carteJouable = true;
 			} else {
-				System.out.println(carteAjouer + " ne peut pas être jouée sur " + talon.sommet());
+				System.out.println(carteAjouer + " ne peut pas Ãªtre jouÃ©e sur " + talon.sommet());
 			}
 		}
 		
 		Carte carte = main.retirer(num);
-		if (carte.getCouleur() == Couleur.NOIR) {	// TODO : ce test doit être déléguée à la classe Jeu
+		if (carte.getCouleur() == Couleur.NOIR) {	// TODO : ce test doit Ãªtre dÃ©lÃ©guÃ©e Ã  la classe Jeu
 			// On doit demander une couleur au joueur
 			System.out.println("Vous devez choisir une couleur");
 			Couleur couleur = donnerCouleur();
-			// Si elle est de couleur noir, on est sûr qu'elle est spéciale !
+			// Si elle est de couleur noir, on est sÃ»r qu'elle est spÃ©ciale !
 			((CarteSpecial) carte).setCouleur(couleur);
 		}
 		talon.empiler(carte);
-		System.out.println(pseudo + " a joué " + carte);
+		System.out.println(pseudo + " a jouÃ© " + carte);
 	}
 
 	/*
@@ -172,14 +172,14 @@ public class Joueur {
 			if (carteAjouer.compatible(talon.sommet())) {
 				carteJouable = true;
 			} else {
-				System.out.println(carteAjouer + " ne peut pas être jouée sur " + talon.sommet());
+				System.out.println(carteAjouer + " ne peut pas Ãªtre jouÃ©e sur " + talon.sommet());
 			}
 		}
 		
 		scanner.close();
 		Carte carte = main.retirer(num);
 		talon.empiler(carte);
-		System.out.println(nom + " a joué " + carte);
+		System.out.println(nom + " a jouÃ© " + carte);
 	}
 	*/
 	
@@ -191,19 +191,19 @@ public class Joueur {
 		HashMap<Integer, Couleur> menu = new HashMap<>();
 		int i = -1;
 		for(Couleur couleur : Couleur.values()) {
-			if (couleur != Couleur.NOIR) {	// la couleur doit être différente de NOIR
+			if (couleur != Couleur.NOIR) {	// la couleur doit Ãªtre diffÃ©rente de NOIR
 				i++;
 				menu.put(i, couleur);
 				System.out.println(i + ") " + couleur.getValeur());
 			}
 		}
-		int choix = Clavier.lireEntier(0, i);	// le choix doit être entre 0 et i
+		int choix = Clavier.lireEntier(0, i);	// le choix doit Ãªtre entre 0 et i
 		return menu.get(choix);
 	}
 
 	/**
-	 * cette méthode doit être privé ! seul le joueur doit connaître combien il a de cartes jouables !
-	 * @return le nombre de cartes jouables çàd : compatibles avec le sommet du talon 
+	 * cette mÃ©thode doit Ãªtre privÃ© ! seul le joueur doit connaÃ®tre combien il a de cartes jouables !
+	 * @return le nombre de cartes jouables Ã§Ã d : compatibles avec le sommet du talon 
 	 */
 	private int nbCartesJouables() {
 		int n = 0;
@@ -222,9 +222,9 @@ public class Joueur {
 	}
 	
 	/**
-	 * contrairement à nbCartesJouables(), cette fonction doit être publique
+	 * contrairement Ã  nbCartesJouables(), cette fonction doit Ãªtre publique
 	 * les autres joueurs peuvent voir combien vous avez de cartes dans la main
-	 * @return le nombre de cartes que posséde le joueur dans sa main
+	 * @return le nombre de cartes que possÃ©de le joueur dans sa main
 	 */
 	public int nbCartes() {
 		return main.nbCartes();
@@ -238,8 +238,8 @@ public class Joueur {
 	}
 	
 	/**
-	 * @return chaîne décrivant le joueur en cours
-	 * le joueur est identifié par son pseudo
+	 * @return chaÃ®ne dÃ©crivant le joueur en cours
+	 * le joueur est identifiÃ© par son pseudo
 	 */
 	public String toString() {
 		return getPseudo();

@@ -1,0 +1,13 @@
+services:
+  uno-game:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: uno-game-cli
+    # stdin_open: true  # enable interactive mode
+    # tty: true         # allocate a pseudo-TTY
+    # volumes:
+    #   - .:/app  # (optional) bind mount local directory for easy editing
+    # ports:
+    #   - "8080:8080"  # if needed for other services or debugging
+    # command: /app/run.sh

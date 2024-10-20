@@ -1,7 +1,7 @@
 package uno;
 
 /**
- * classe représentant le talon du jeu
+ * classe reprÃ©sentant le talon du jeu
  * @author Stoufa
  *
  */
@@ -16,8 +16,8 @@ public class Talon extends Pile {
 	}
 	
 	/**
-	 * permet d'ajouter la premiére carte ( au début du jeu )
-	 * @param pioche : la pioche d'où on veut tirer la carte
+	 * permet d'ajouter la premiÃ©re carte ( au dÃ©but du jeu )
+	 * @param pioche : la pioche d'oÃ¹ on veut tirer la carte
 	 */
 	private void ajouterPremiereCarte(Pioche pioche) {
 		empiler(pioche.premiereCarteTalon());
@@ -25,10 +25,10 @@ public class Talon extends Pile {
 		while (true) {
 			// Retirer une carte
 			Carte carte = pioche.depiler();
-			if (carte instanceof CarteSpecial) {	// C'est une carte spéciale
-				// Il faut dans ce cas la rajouter aléatoirement dans la pioche
+			if (carte instanceof CarteSpecial) {	// C'est une carte spÃ©ciale
+				// Il faut dans ce cas la rajouter alÃ©atoirement dans la pioche
 				pioche.retournerCarte(carte);
-				//System.out.println("Oops carte spécial , ...");
+				//System.out.println("Oops carte spÃ©cial , ...");
 				//System.out.println(carte);
 			} else {
 				this.empiler(carte);
@@ -39,7 +39,7 @@ public class Talon extends Pile {
 	}
 	
 	/**
-	 * retourne une chaîne décrivant le talon
+	 * retourne une chaÃ®ne dÃ©crivant le talon
 	 */
 	public String toString() {
 		String str = "";
@@ -49,7 +49,7 @@ public class Talon extends Pile {
 		for(int i = 0; i < cartes.size(); ++i) {
 			Carte carte = cartes.get(i);
 			str = str + i + ") " + carte.toString();
-			if (i != cartes.size() - 1) {	// si ce n'est pas la dernière itèration
+			if (i != cartes.size() - 1) {	// si ce n'est pas la derniÃ¨re itÃ¨ration
 				str = str + "\n";	// ajouter un retour chariot
 			}
 		}

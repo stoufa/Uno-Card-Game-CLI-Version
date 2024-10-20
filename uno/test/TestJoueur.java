@@ -55,7 +55,7 @@ public class TestJoueur {
 		}
 		*/
 		
-		int direction = 1;	//	peut être soit 1 soit -1
+		int direction = 1;	//	peut Ãªtre soit 1 soit -1
 		int indice = 0;	// indice du joueur qui a le tour de jouer
 		Joueur joueurCourant;
 		while (true) {
@@ -63,7 +63,7 @@ public class TestJoueur {
 			System.out.println("Tour de " + joueurCourant.getPseudo());
 			joueurCourant.jouerTour();
 			if (joueurCourant.nbCartes() == 0) {
-				System.out.println(joueurCourant.getPseudo() + " a gagné !");
+				System.out.println(joueurCourant.getPseudo() + " a gagnÃ© !");
 				break;
 			}
 			// avancer vers le joueur suivant

@@ -6,34 +6,34 @@ import java.util.Scanner;
 import uno.Carte;
 
 /**
- * cette classe nous permet d'interagir avec le joueur à travers le clavier
+ * cette classe nous permet d'interagir avec le joueur Ã  travers le clavier
  * @author Stoufa
  *
  */
 public class Clavier {
 
     /**
-     * grace à cet objet on peut lire à partir du clavier
+     * grace Ã  cet objet on peut lire Ã  partir du clavier
      */
     private static Scanner scanner = new Scanner( System.in );
 
     /**
-     * permet de lire un entier à partir du clavier
+     * permet de lire un entier Ã  partir du clavier
      * @return l'entier lu
      */
     public static int lireEntier() {
         System.out.print( "? >> " );
         int res = scanner.nextInt();
-        scanner.nextLine(); // pour consommer le caractére \n à la fin de la chaîne
-        // sinon, on va avoir des problèmes si on souhaite ensuite lire une chaîne de caractères !
+        scanner.nextLine(); // pour consommer le caractÃ©re \n Ã  la fin de la chaÃ®ne
+        // sinon, on va avoir des problÃ¨mes si on souhaite ensuite lire une chaÃ®ne de caractÃ¨res !
         // http://stackoverflow.com/questions/13102045/scanner-is-skipping-nextline-after-using-next-nextint-or-other-nextfoo
         return res;
     }
 
     /**
      * permet de lire un entier entre min et max
-     * @param min	la borne inférieure de l'entier à lire
-     * @param max	la borne supérieure de l'entier à lire
+     * @param min	la borne infÃ©rieure de l'entier Ã  lire
+     * @param max	la borne supÃ©rieure de l'entier Ã  lire
      * @return		l'entier qu'on veut lire du clavier
      */
     public static int lireEntier( int min, int max ) {
@@ -56,7 +56,7 @@ public class Clavier {
     }
 
     /**
-     * permet de lire un entier qui représente l'une des cases de la liste arrayList
+     * permet de lire un entier qui reprÃ©sente l'une des cases de la liste arrayList
      * @param arrayList la liste dont on veut lire un indice valide
      * @return l'indice de l'une des cases de la liste arrayList
      */
@@ -64,12 +64,12 @@ public class Clavier {
         if ( arrayList.isEmpty() ) {
             return -1;
         }
-        return lireEntier( 0, arrayList.size() - 1 ); // les listes sont indéxés de 0 à nbElements - 1
+        return lireEntier( 0, arrayList.size() - 1 ); // les listes sont indÃ©xÃ©s de 0 Ã  nbElements - 1
     }
 
     /**
-     * permet de lire une chaîne de caractères à partir du clavier
-     * @return la chaîne lue
+     * permet de lire une chaÃ®ne de caractÃ¨res Ã  partir du clavier
+     * @return la chaÃ®ne lue
      */
     public static String lireChaine() {
         System.out.print( "? >> " );
@@ -77,7 +77,7 @@ public class Clavier {
     }
 
     /**
-     * permer de fermer la variable scanner à la fin du programme
+     * permer de fermer la variable scanner Ã  la fin du programme
      */
     public static void fermer() {
         scanner.close();

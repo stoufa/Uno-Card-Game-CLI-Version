@@ -1,7 +1,7 @@
 package uno;
 
 /**
- * cette classe représente les cartes spéciales du jeu
+ * cette classe reprÃ©sente les cartes spÃ©ciales du jeu
  * @author Stoufa
  *
  */
@@ -24,7 +24,7 @@ public class CarteSpecial extends Carte {
 	}
 	
 	/**
-	 * retourne une chaîne contenant la représentation de la carte 
+	 * retourne une chaÃ®ne contenant la reprÃ©sentation de la carte 
 	 */
 	@Override
 	public String toString() {
@@ -32,29 +32,29 @@ public class CarteSpecial extends Carte {
 	}
 	
 	/**
-	 * @return true : si la carte courante est compatible avec celle passée en paramétre (çàd : jouable)
+	 * @return true : si la carte courante est compatible avec celle passÃ©e en paramÃ©tre (Ã§Ã d : jouable)
 	 * @return false : sinon
-	 * @param carte : la carte à comparer avec l'objet courant
+	 * @param carte : la carte Ã  comparer avec l'objet courant
 	 */
 	@Override
 	public boolean compatible(Carte carte) {
 		if (couleur == Couleur.NOIR) {
 			return true;	// Les cartes noirs ( nottament le Joker et la carte +4 )
-			// peuvent être déposée sur n'importe qu'elle autre carte
+			// peuvent Ãªtre dÃ©posÃ©e sur n'importe qu'elle autre carte
 		}
 		if (carte instanceof CarteSpecial) {	//	CarteSpecial
-			// même couleur ou même symbole ?
-			return ( carte.couleur == couleur ) || ( ((CarteSpecial) carte).symbole == symbole );	// même couleur ou même symbole
+			// mÃªme couleur ou mÃªme symbole ?
+			return ( carte.couleur == couleur ) || ( ((CarteSpecial) carte).symbole == symbole );	// mÃªme couleur ou mÃªme symbole
 		} else {	// CarteChiffre
-			// même couleur ?
-			return carte.couleur == couleur;	// même couleur
+			// mÃªme couleur ?
+			return carte.couleur == couleur;	// mÃªme couleur
 		}
 	}
 	
 	/**
-	 * permet de changer la couleur de la carte spéciale et ceci n'est possible
+	 * permet de changer la couleur de la carte spÃ©ciale et ceci n'est possible
 	 * que si la couleur initiale de la carte est NOIR
-	 * @param couleur : peut être ROUGE, JAUNE, VERT ou BLEU
+	 * @param couleur : peut Ãªtre ROUGE, JAUNE, VERT ou BLEU
 	 */
 	public void setCouleur(Couleur couleur) {
 		if (this.couleur == Couleur.NOIR) {
@@ -65,8 +65,8 @@ public class CarteSpecial extends Carte {
 	}
 
 	/**
-	 * permet de retourner le symbole de la carte spéciale
-	 * @return le symbole de la carte spéciale
+	 * permet de retourner le symbole de la carte spÃ©ciale
+	 * @return le symbole de la carte spÃ©ciale
 	 */
 	public Symbole getSymbole() {
 		return symbole;

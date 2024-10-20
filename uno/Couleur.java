@@ -1,7 +1,7 @@
 package uno;
 
 /**
- * énumération présentant les couleurs possibles des cartes du jeu uno
+ * Ã©numÃ©ration prÃ©sentant les couleurs possibles des cartes du jeu uno
  * @author Stoufa
  *
  */
@@ -14,8 +14,8 @@ public enum Couleur {
 	NOIR("Noir");
 	
 	/**
-	 * la valeur de la couleur, en fait c'est une chaîne de caractères contenant le nom de la couleur
-	 * utile dans la méthode toString()
+	 * la valeur de la couleur, en fait c'est une chaÃ®ne de caractÃ¨res contenant le nom de la couleur
+	 * utile dans la mÃ©thode toString()
 	 */
 	private String valeur;
 	
